@@ -205,7 +205,6 @@ ul {
     margin-right: 30px;
 }
 .advantages-img {
-    width: 270px;
     height: 120px;
     background-color:#F5F4FA;
     display:flex;
@@ -363,7 +362,6 @@ ul {
 .clients-link {
     width: 170px;
     height:92px;
-    background-color:var(--background-light);
     border: 1px solid #AFB1B8;
     display: flex;
     justify-content: center;
@@ -397,7 +395,7 @@ footer .logo {
 }
 .footer-context {
 display: flex;
-flex-direction: wrap;
+align-items: baseline;
 }
 .address-link {
     color: var(--contrast-color);
@@ -433,9 +431,7 @@ flex-direction: wrap;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-.our-contacts {
-    margin-top: 12px;
-}
+
 .our-contacts-link-social {
     width: 44px;
     height: 44px;
@@ -533,10 +529,46 @@ flex-direction: wrap;
 .project-item:nth-child(7,8,9) {
     margin-bottom: 0;
 }
+    
 .project-link {
     display: block;
 }
 .project-link:hover {
     box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
     0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+width: 100%;
+height: 100%;
+background-color: rgba(33, 150, 243, 0.9);
+opacity: 0;
+}
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 322px;
+    height: 168px;
+    transform: translate(-50%, -50%);
+ 
+
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: left;
+    letter-spacing: 3%;
+    color: var(--contrast-color);
+}
+
+.project-image:hover .overlay{
+    opacity: 1;
+    transform: translateY(0);
 }
